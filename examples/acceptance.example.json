@@ -1,0 +1,8 @@
+{
+  "schema": "verseforge-acceptance-v1",
+  "requirements": [
+    {"id": "event device class declaration", "validation": "static-evidence", "contains": "creative_device"},
+    {"id": "device responds when player interacts", "validation": "manual-uefn"},
+    {"id": "isolated behavior for two players", "validation": "multiplayer-uefn"}
+  ]
+}

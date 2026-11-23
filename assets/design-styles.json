@@ -1,0 +1,80 @@
+[
+  {
+    "id": "fivem-premium",
+    "name": "FiveM Premium",
+    "guidance": "dark, information-dense vehicle/finance panels",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "fivem-rp",
+    "name": "FiveM RP",
+    "guidance": "community-oriented roleplay dashboards",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "fivem-police-mdt",
+    "name": "FiveM Police MDT",
+    "guidance": "high-density case management, clear access hierarchy",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "roblox-rp",
+    "name": "Roblox RP",
+    "guidance": "bold approachable labeled controls",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "roblox-simulator",
+    "name": "Roblox Simulator",
+    "guidance": "bright reward and progression feedback",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "fortnite-native",
+    "name": "Fortnite Native",
+    "guidance": "readable gamepad-first HUD elements",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "gta-online",
+    "name": "GTA Online",
+    "guidance": "dense entertainment menus, original layout",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "apple-minimal",
+    "name": "Apple Minimal",
+    "guidance": "restrained monochrome typography and hierarchy",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "sci-fi-laboratory",
+    "name": "Sci-Fi Laboratory",
+    "guidance": "technical telemetry and radial motifs",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "cyberpunk",
+    "name": "Cyberpunk",
+    "guidance": "high-contrast futuristic neon accents",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "military---tactical",
+    "name": "Military / Tactical",
+    "guidance": "muted field-display typography",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "fantasy-rpg",
+    "name": "Fantasy RPG",
+    "guidance": "ornamental inventory and quests",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  },
+  {
+    "id": "hybrid-custom",
+    "name": "Hybrid Custom",
+    "guidance": "project-defined mix of tokens",
+    "copyright_rule": "Design inspiration only; create original graphics and layouts."
+  }
+]

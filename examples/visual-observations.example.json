@@ -1,0 +1,14 @@
+{
+  "schema": "verseforge-visual-observations-v1",
+  "screens": [
+    {
+      "id": "inventory",
+      "elements": [
+        {"id": "title", "kind": "text", "text": "INVENTORY", "bounds": {"x": 0.1, "y": 0.08, "w": 0.4, "h": 0.1}, "evidence": "observed", "action": "display"},
+        {"id": "close_button", "kind": "button", "text": "Close", "bounds": {"x": 0.8, "y": 0.07, "w": 0.1, "h": 0.1}, "evidence": "observed", "action": "close"},
+        {"id": "inventory_items", "kind": "list", "text": "", "bounds": {"x": 0.12, "y": 0.22, "w": 0.72, "h": 0.63}, "evidence": "inferred", "action": "unknown"}
+      ]
+    }
+  ],
+  "requested_behavior": "Build a user-specified inventory UI. Item ownership, transactions and server-side gameplay are not observable in the reference."
+}

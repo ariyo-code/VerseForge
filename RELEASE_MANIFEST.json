@@ -1,0 +1,669 @@
+{
+  "schema": "verseforge-public-release-v1",
+  "version": "1.0.0-rc4",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "bytes": 634,
+      "sha256": "0fd6688930b70dce84a4a84e53367e1cb85d02f3c27eff02c10b6e13208c45f6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13214,
+      "sha256": "75d2180885a1fb6b2d12a1357636bb7edd930decaf73db3192e3f1a6de455581"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 18287,
+      "sha256": "b9b830e56a8b5e4ec9fe32e4628cc51f6184a648be5120c7b439fff4ed7daa41"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 295,
+      "sha256": "5328c9cf4406f782cab7bb0c7f429fe963729a11ad4a9aeca3faba0617cf08ac"
+    },
+    {
+      "path": "assets/design-dna.example.json",
+      "bytes": 1015,
+      "sha256": "c9ffe7f76f12531e7bfc6b5328347377732d08e0b9407960baad8e6dccbf911b"
+    },
+    {
+      "path": "assets/design-styles.json",
+      "bytes": 2734,
+      "sha256": "5c665d2a4a5bc3dbb7d04a0820a83f606f6ebd9d2c40a23a67ff7fe634da4c73"
+    },
+    {
+      "path": "assets/sources.json",
+      "bytes": 6945,
+      "sha256": "cac85cdf61589d8394fe6b976210b3a9c8615c0bdf6fa92dbe612153e7412a51"
+    },
+    {
+      "path": "ci/README.md",
+      "bytes": 846,
+      "sha256": "4749561439ba67fce3830fdce693f10d4c2462e9f0e5d615b43346c84e04c901"
+    },
+    {
+      "path": "ci/owner-ci.yml",
+      "bytes": 1016,
+      "sha256": "6bc854a4caa76820a3fb27f96d24e65373a33165ebc31a5251445b3a81b204db"
+    },
+    {
+      "path": "ci/public-ci.yml",
+      "bytes": 1410,
+      "sha256": "f6e1cc99b592c318986ccd8dcd9064d7203f502c11befad16e8979adf39d9ff4"
+    },
+    {
+      "path": "evals/LOT03_GAMEPLAY_MATRIX.json",
+      "bytes": 8297,
+      "sha256": "45c366b69b13af1fe5a9ceb05f1aba9a6b628d57ed378f16cbe0d1ece8e4b774"
+    },
+    {
+      "path": "evals/LOT05_CHAT_E2E.json",
+      "bytes": 689,
+      "sha256": "bdcd54a5a39f96e7d763a0e037099fde26f8a979bd4673cd2f0ab7320137d7cd"
+    },
+    {
+      "path": "evals/LOT05_HOST_COMPATIBILITY.json",
+      "bytes": 874,
+      "sha256": "20a14acc677a64236b7526e22009020123ea8ec1cc6a63c9491229ceacbf0c98"
+    },
+    {
+      "path": "evals/RELEASE_GATE_RC.json",
+      "bytes": 1551,
+      "sha256": "5b8ff2925cc83b58414616895e0afb987682d4213ceba9e6e78228905d951db2"
+    },
+    {
+      "path": "evals/RELEASE_GATE_RC2.json",
+      "bytes": 642,
+      "sha256": "731d11364c93df284f70214d9b4f0d2fed4108ee4da16aa4afbb1401b5bb1292"
+    },
+    {
+      "path": "evals/RELEASE_GATE_RC4.json",
+      "bytes": 585,
+      "sha256": "337849aecefc70ed081e5075656b6973460587bea9adf2c3bde906c28f632506"
+    },
+    {
+      "path": "evals/scenarios.json",
+      "bytes": 1589,
+      "sha256": "a262e72eb59e20ec3a0650e3ea02d54c04623c1112ea4f49d027a7b0968acb8b"
+    },
+    {
+      "path": "examples/acceptance.example.json",
+      "bytes": 342,
+      "sha256": "3399d5b507adf51f4672568e1501eabb16311aa5a61b54a2e2b5b0cce1a0c32a"
+    },
+    {
+      "path": "examples/asset-import.example.json",
+      "bytes": 326,
+      "sha256": "250e6dd36bf967d7c892f9ebe4a705168274a59af1a97b5232886ea5e8027441"
+    },
+    {
+      "path": "examples/benchmarks/A-interactive-device/vf_interactive_notice_device.verse",
+      "bytes": 991,
+      "sha256": "4b0f654a1bd524742ecf0f7eafa1ed7e929340c7a2c63dbce106f332bedd6a61"
+    },
+    {
+      "path": "examples/benchmarks/B-verse-ui/vf_two_view_ui_device.verse",
+      "bytes": 4126,
+      "sha256": "d674b388ac1b7047635b566f06453789d951a678a653c9ca2f71135514ee848b"
+    },
+    {
+      "path": "examples/benchmarks/C-rp-garage/vf_garage_profile.verse",
+      "bytes": 606,
+      "sha256": "56ad2af4e33e7494d23313233044e7e98f8307c5357d41aeda35abab742919ef"
+    },
+    {
+      "path": "examples/benchmarks/C-rp-garage/vf_starter_garage_device.verse",
+      "bytes": 5210,
+      "sha256": "68a053c1f15a94c6a11fac7543b8e063b64a6704b2792c28a2b13ca6fbe22265"
+    },
+    {
+      "path": "examples/benchmarks/LOT03_VALIDATION.json",
+      "bytes": 1268,
+      "sha256": "6b22fb25fa641a67b76b0fc998dd548e077efbda162a93636bf0cbe29a62e32d"
+    },
+    {
+      "path": "examples/benchmarks/README.md",
+      "bytes": 4002,
+      "sha256": "1278825c3cfd4c3bbf558edbc1ffc7db4fb1339cd8903bb77c8d0f588e4272c2"
+    },
+    {
+      "path": "examples/benchmarks/api-evidence.json",
+      "bytes": 4224,
+      "sha256": "db29cfe985ac1ed710ea6123a55f89c22cfbed63ddc03f281a8b9bcd1e7fd2c3"
+    },
+    {
+      "path": "examples/button-hud-recipe.json",
+      "bytes": 144,
+      "sha256": "fcab39985762f0df2f7251b9af0346b1ff2ec73f43d2dfb3b7321662de91784c"
+    },
+    {
+      "path": "examples/city-rp-architecture.json",
+      "bytes": 1593,
+      "sha256": "4aadb6a5267bd7e5bee6d934ed11ed3ca10987941ddf2479d34abfda7189aaf6"
+    },
+    {
+      "path": "examples/visual-observations.example.json",
+      "bytes": 778,
+      "sha256": "32c52ff6fb70a15fd138f03ad0535daee87a1e66b70f1c6a96633f6eb8439ada"
+    },
+    {
+      "path": "examples/visual-two-screen.json",
+      "bytes": 948,
+      "sha256": "e5a8aa4a0d9c024e1a78caec60cdce3ec62a9cd139d229cb5288f38d5e40f2b5"
+    },
+    {
+      "path": "integrations/CHATGPT_FR.md",
+      "bytes": 2909,
+      "sha256": "a5b7d51373558184cd322ec83c10be9ad62a01ba878a1e5a6b326e81de43f15d"
+    },
+    {
+      "path": "integrations/CHAT_MODE_FR.md",
+      "bytes": 2233,
+      "sha256": "1e816b527fcdeee0cb60ae26b44b7e518a854ff220afd98c546c5f8d58a93440"
+    },
+    {
+      "path": "integrations/CLAUDE.md",
+      "bytes": 308,
+      "sha256": "50748a3f7f69e233b13ee79d04d93d5acfebbd353360544c9356458056364179"
+    },
+    {
+      "path": "integrations/CODEX.md",
+      "bytes": 326,
+      "sha256": "e8f4a943e9209c7fcf3d09f9c2668e769fda7a22466402d25302d2b54e706de8"
+    },
+    {
+      "path": "integrations/CURSOR.md",
+      "bytes": 250,
+      "sha256": "8167e5b2bbd7b2f57d2773b3a4e49e2c9fa9e3df977595cfbe0947169a13353e"
+    },
+    {
+      "path": "integrations/INSTALL.md",
+      "bytes": 1102,
+      "sha256": "2fb6e6a358f0b724968a39282b942ffcc70b94018973c3e563795a2375b0b207"
+    },
+    {
+      "path": "integrations/INSTALLATION_FR.md",
+      "bytes": 1647,
+      "sha256": "faf053fb3434760527f4c297e8f0c70dd19aa361707c27829cf41c58c4c5a16b"
+    },
+    {
+      "path": "integrations/LOT05_HOST_VALIDATION_FR.md",
+      "bytes": 1783,
+      "sha256": "d8c49bbf3879e95b4d34f7364d15329eedcb4a66209d73eeafc740c786d2f4a4"
+    },
+    {
+      "path": "integrations/UEFN_MCP.md",
+      "bytes": 4105,
+      "sha256": "a79263951c8bff6abbf2e86d159fb5c6d5950416c6bf100c8b044f69523c7ad5"
+    },
+    {
+      "path": "integrations/windows-kit/Collect-Compiler-Log.ps1",
+      "bytes": 1286,
+      "sha256": "ffc836d96db94b252c3aa11095b06ac32a83d73b72a2d425e43f01c8037bb87f"
+    },
+    {
+      "path": "integrations/windows-kit/Diagnose-UEFN.ps1",
+      "bytes": 1002,
+      "sha256": "2c3216b2b83382d643f380af28f9e7e2e4f5f25920a4bbc4b0ba256cee306b2b"
+    },
+    {
+      "path": "integrations/windows-kit/README_FR.md",
+      "bytes": 4445,
+      "sha256": "81af1c61cf3f9d553fe6134fb06dfb57b5157c06990c36650e04adc64286cfc8"
+    },
+    {
+      "path": "integrations/windows-kit/Stage-Benchmarks.ps1",
+      "bytes": 2846,
+      "sha256": "7f75bc26481336fdcb31314d566f9612a68c670823c755c17dac70847f996319"
+    },
+    {
+      "path": "references/gameplay/RECIPES.md",
+      "bytes": 631,
+      "sha256": "72d9e038ddf7ff839cb9e340e46e2be020945e3d8f7b271916e69819d2961fae"
+    },
+    {
+      "path": "references/multiplayer/STATE.md",
+      "bytes": 1235,
+      "sha256": "3e6e09c345359810244146343b2e5d9f8595e43fc918eae182ded365fa0cde44"
+    },
+    {
+      "path": "references/optimization/CHECKLIST.md",
+      "bytes": 603,
+      "sha256": "3d118678f910677e99c7fe64d2f03774c45b43f194e9fac8c00055f153198bc2"
+    },
+    {
+      "path": "references/product/SECURITY_DEPLOYMENT.md",
+      "bytes": 2253,
+      "sha256": "c1e65eb9670ba25419752038e4994d38ae99be85c217ea3a9fa4d336233eaa6e"
+    },
+    {
+      "path": "references/security/TRUST.md",
+      "bytes": 947,
+      "sha256": "79b74f8565b2e4b24f590c001f6a5e28ae613bea8f6e118b1b4db31c0a9517bf"
+    },
+    {
+      "path": "references/uefn/EDITOR.md",
+      "bytes": 779,
+      "sha256": "3237737900e421ab4972c2494c9da960bfdf95ceaed5a5baca3472726340f2e5"
+    },
+    {
+      "path": "references/ui/ENGINE.md",
+      "bytes": 1930,
+      "sha256": "549c5eb53a45c59596cdb64b2cbf6b65b014d5e4364030dba9b2e59e8d4c8cb6"
+    },
+    {
+      "path": "references/validation/EVIDENCE.md",
+      "bytes": 874,
+      "sha256": "ae84f997b08448bca762742eb1321fbd5331d4cfa68fb09388f75104ae0b92e1"
+    },
+    {
+      "path": "references/validation/LOT02_EVIDENCE.md",
+      "bytes": 1115,
+      "sha256": "e2f4478c9ae8deea40444f2f12ad13f2f0d3f8193e91c99a6b090a80c956210d"
+    },
+    {
+      "path": "references/verse/ENGINE.md",
+      "bytes": 705,
+      "sha256": "ae85f20176ea144810ba911f809078bb1f4460cb2bc00492a23abb487ddef483"
+    },
+    {
+      "path": "requirements-optional.txt",
+      "bytes": 291,
+      "sha256": "c3867e840243f2ad2bfbe17dd37f2e35c7c90b6750f2996205cbe1fd1fb27b01"
+    },
+    {
+      "path": "scripts/verseforge_core/__init__.py",
+      "bytes": 110,
+      "sha256": "0fb79f4c789f8e3a96d62a75a1342ba1fe99bfc7c7e7e812ac93ebc3f35c8770"
+    },
+    {
+      "path": "scripts/verseforge_core/asset_catalog.py",
+      "bytes": 2749,
+      "sha256": "d6de3aeb05e573c63315aab2399f8d7dee4e20f51b5e362195aa8156d20b7cd5"
+    },
+    {
+      "path": "scripts/verseforge_core/asset_engine.py",
+      "bytes": 7355,
+      "sha256": "3a5df0318cbd03070519cfaa87220c65b4bae52653bfa375d7fc888111ea3311"
+    },
+    {
+      "path": "scripts/verseforge_core/asset_license.py",
+      "bytes": 3576,
+      "sha256": "ef239ce8271872e9f63d3bf9cd667b6811d6455758b372148c268bfe58136ecb"
+    },
+    {
+      "path": "scripts/verseforge_core/build.py",
+      "bytes": 1776,
+      "sha256": "49d61c261830d4be08d4ee2abe1c8599c54a720e095c092ef233149bc2e083d6"
+    },
+    {
+      "path": "scripts/verseforge_core/chat_mode.py",
+      "bytes": 11455,
+      "sha256": "ebf6bd122d30749b4129447d80496489ddf00ead6075a8f496ac0c6aabebbc28"
+    },
+    {
+      "path": "scripts/verseforge_core/chat_package.py",
+      "bytes": 9664,
+      "sha256": "1511284b53ca37caa78d4381e81edc2c0eb2d5c5da2a2a9710268db25e26e4bd"
+    },
+    {
+      "path": "scripts/verseforge_core/cli.py",
+      "bytes": 22182,
+      "sha256": "ed77932653a716ddf1cc53883d58d97c3ef70deb28b90f959d60c7b79b3c620f"
+    },
+    {
+      "path": "scripts/verseforge_core/compilation.py",
+      "bytes": 7796,
+      "sha256": "ae03437f06aecbea88e258f72869f04e2bfb0dcc0aa3aa35056c3b06173548f4"
+    },
+    {
+      "path": "scripts/verseforge_core/compose_engine.py",
+      "bytes": 6867,
+      "sha256": "fbb0445c2f95ecef8de49f96295e9b44324b5abfa121a59362de3abdde2f42d4"
+    },
+    {
+      "path": "scripts/verseforge_core/delivery_pipeline.py",
+      "bytes": 4067,
+      "sha256": "8803c4eac25d06a564664fe96c063dbd3203886c2acae9033d4c065bacf7c654"
+    },
+    {
+      "path": "scripts/verseforge_core/distribution.py",
+      "bytes": 16028,
+      "sha256": "83a5954365b8c07f07bb5aea8ca37f0eae501a6cd4d5f00feccbea12fb56371c"
+    },
+    {
+      "path": "scripts/verseforge_core/engineering_engine.py",
+      "bytes": 9376,
+      "sha256": "411c76fb0387942e4e89c2817d75b6c13bfa35ca345f804bee2f718f0e5d029c"
+    },
+    {
+      "path": "scripts/verseforge_core/environment.py",
+      "bytes": 7156,
+      "sha256": "ddae3563319dfddcc315c463bd94078784d93816cb021e23685e3e8acccef44d"
+    },
+    {
+      "path": "scripts/verseforge_core/gates.py",
+      "bytes": 3112,
+      "sha256": "262ab1f335c031aea447c18baa3f0fa4e9b11e5ba9d6e46b07a90d1781ecdbdf"
+    },
+    {
+      "path": "scripts/verseforge_core/knowledge.py",
+      "bytes": 1965,
+      "sha256": "8da37531e12fa174337b5ea89bff03204570d3cbcebcafa642965cd6c05688e4"
+    },
+    {
+      "path": "scripts/verseforge_core/knowledge_sync.py",
+      "bytes": 3853,
+      "sha256": "d1f2ea08c4c21367e99428ba7b50730e4343f91ced71b98eec0c1d052cebc648"
+    },
+    {
+      "path": "scripts/verseforge_core/mcp_client.py",
+      "bytes": 4396,
+      "sha256": "e98a35eef62ef4d0de1968be16efa9b4e273dad6c3ded6a5a4b7f656921405c8"
+    },
+    {
+      "path": "scripts/verseforge_core/mcp_probe.py",
+      "bytes": 5804,
+      "sha256": "bb0055b87dd070d012d85bbed064f0a5d7e266acb07133cbddda03363c1c7bf3"
+    },
+    {
+      "path": "scripts/verseforge_core/mcp_runtime.py",
+      "bytes": 8795,
+      "sha256": "ab42fa1617d3d147eb85d0b0114e3f29705128e086d46f28987c450757a7f643"
+    },
+    {
+      "path": "scripts/verseforge_core/mcp_sync.py",
+      "bytes": 2945,
+      "sha256": "5b3535b806454572cfb597f94ee3e5e75726c1435da9d36f792344dfa832f76b"
+    },
+    {
+      "path": "scripts/verseforge_core/project.py",
+      "bytes": 3623,
+      "sha256": "38fa1e948f7a56da58a0beb8d101b9213c149855dc47a0322d8a33ea4e0397c4"
+    },
+    {
+      "path": "scripts/verseforge_core/provenance.py",
+      "bytes": 3402,
+      "sha256": "13977312f15bd0b9b8d96abc9dad0f7c75a7d029cf0f57819454a85d74b5348e"
+    },
+    {
+      "path": "scripts/verseforge_core/quality_engine.py",
+      "bytes": 6558,
+      "sha256": "811982dae46f4ceef5fa2b5efdb125d54b18b94e76ba1ab08991b6f4cb85d30d"
+    },
+    {
+      "path": "scripts/verseforge_core/recipe_generator.py",
+      "bytes": 4404,
+      "sha256": "7ee72747751c8f3f896f5fb37eafe3484543694ca696e3db2ce759847e4bd948"
+    },
+    {
+      "path": "scripts/verseforge_core/release_signature.py",
+      "bytes": 4662,
+      "sha256": "074add711781c67e25f00618f9e64e6aa6de95e248250d4c34c8130d2e6e1516"
+    },
+    {
+      "path": "scripts/verseforge_core/reliability.py",
+      "bytes": 2041,
+      "sha256": "e907fe74d54d1f1a77f7017d9214aa2873bd0a77014b59a8454ef7c9f35e934c"
+    },
+    {
+      "path": "scripts/verseforge_core/repair.py",
+      "bytes": 1841,
+      "sha256": "9447ee84dbcde5344a3cafecdbf13d0412d8e6cbbf87fbffa5eabf77bd0109a9"
+    },
+    {
+      "path": "scripts/verseforge_core/repair_session.py",
+      "bytes": 4813,
+      "sha256": "a67bb4f907155162dbb1ddc9057026b31d35025448c9b88a684e7eeb5b324b16"
+    },
+    {
+      "path": "scripts/verseforge_core/ui.py",
+      "bytes": 1318,
+      "sha256": "8e0169476cbe37af7a3effc277b0b812e79680ce880da62e346ba0905e2fc582"
+    },
+    {
+      "path": "scripts/verseforge_core/ui_engine.py",
+      "bytes": 12257,
+      "sha256": "c42746668a66bdfc84a4cb80799b70ae0f86b0b350545c07a4df543639b55774"
+    },
+    {
+      "path": "scripts/verseforge_core/unified_bundle.py",
+      "bytes": 6742,
+      "sha256": "4d5fe751bbb2ca1da5b0f28b99c69d0290ab06ad9ead9dc30e20f2fe658fb4a1"
+    },
+    {
+      "path": "scripts/verseforge_core/validation.py",
+      "bytes": 3153,
+      "sha256": "e837cf93a63b650453e3203c4e8f65be208042725b000c6a76858565ba2aa3ae"
+    },
+    {
+      "path": "scripts/verseforge_core/verse_ui_generator.py",
+      "bytes": 8288,
+      "sha256": "74d1371456366b1ca3b462221d3dec2b138e05a51a4e3349400a98bcb6822dd4"
+    },
+    {
+      "path": "scripts/verseforge_core/visual_reverse.py",
+      "bytes": 9634,
+      "sha256": "7d1ce5d58a8d6480fe83304cbdc5fd4b899cd8ba8900230d1cb40b85afbf67de"
+    },
+    {
+      "path": "scripts/verseforge_core/workspace.py",
+      "bytes": 7567,
+      "sha256": "36e777b81c222fb39205b26aaf948306753acd8324bd5941086e18d1e872e202"
+    },
+    {
+      "path": "scripts/verseforge_core/xray.py",
+      "bytes": 4520,
+      "sha256": "24ee4f95374db28e80dd6f657dcb05ff137b133e6bef3eca54a58ad0f605fbdc"
+    },
+    {
+      "path": "scripts/vf.py",
+      "bytes": 182,
+      "sha256": "9236fc9fe5946ba5921313994a0581bbcd365c975b99f637886fd5339a587ca7"
+    },
+    {
+      "path": "templates/recipes.json",
+      "bytes": 16279,
+      "sha256": "bc913163024fd928e589f1b8e491e3a5ee061c74362b51995a607c9bea7b51e2"
+    },
+    {
+      "path": "templates/ui-screens/garage.json",
+      "bytes": 1925,
+      "sha256": "9f9f27321342fe56c3057f521fffe0710e76f7a7acb96ff345b515becbdf40cf"
+    },
+    {
+      "path": "tests/test_final_assets.py",
+      "bytes": 3367,
+      "sha256": "e74169ecedb9f9a7fad000d050149a358d862dc3c950a7a78f60b3797df66cae"
+    },
+    {
+      "path": "tests/test_final_cli.py",
+      "bytes": 1705,
+      "sha256": "3bb32862b903ee7b13a478fb8da142b5266808637dffe6c189ddc340d66381da"
+    },
+    {
+      "path": "tests/test_final_quality.py",
+      "bytes": 7308,
+      "sha256": "eae48086f92b34c69eb8ff0194414a0003ae25555afa4b66d90cf3af6e350592"
+    },
+    {
+      "path": "tests/test_lot02.py",
+      "bytes": 16782,
+      "sha256": "aec5e0ae564b2fc306085bf86bc2b7c6458faaa955e35514a19214be8a01946a"
+    },
+    {
+      "path": "tests/test_lot03.py",
+      "bytes": 14201,
+      "sha256": "2e036c00853d028250fcfe2665c0f794ea35323436344676fef2d6680fa9f0bb"
+    },
+    {
+      "path": "tests/test_lot04.py",
+      "bytes": 5628,
+      "sha256": "1ff5989ceb6b9120c4dc56d8e1c75de4345d159ca7e04575fceb4d33b8725ab2"
+    },
+    {
+      "path": "tests/test_lot05.py",
+      "bytes": 10809,
+      "sha256": "cec5d152214ec5a6bba755ba574e00228da034a461e3dd2d3ad5c84d3a174a3f"
+    },
+    {
+      "path": "tests/test_public.py",
+      "bytes": 3527,
+      "sha256": "f4f0893f2b02a5500c342b65360449c0c79081d8c3a1220bd85daa2ebbfabe49"
+    },
+    {
+      "path": "tests/test_v100_asset_catalog.py",
+      "bytes": 1917,
+      "sha256": "ebce97cab026bb964a95019180560d8fe10076d41e943b1ededb00a56869bdf8"
+    },
+    {
+      "path": "tests/test_v100_asset_ui_link.py",
+      "bytes": 3015,
+      "sha256": "73a08e2c3816383038bf40a4a70ab8b6f2c506df00008b8bbbd49ba20a377240"
+    },
+    {
+      "path": "tests/test_v100_compose.py",
+      "bytes": 4410,
+      "sha256": "d2012efee51ac4427418fd03b812ef47aaefcf0fc06821e74b88e962d19b6f55"
+    },
+    {
+      "path": "tests/test_v100_design_tokens.py",
+      "bytes": 1322,
+      "sha256": "e747b4c80b7f4c39babef4a1d2a850078e6a59120b1e6a56cdc4d4e035b42349"
+    },
+    {
+      "path": "tests/test_v100_engines.py",
+      "bytes": 10539,
+      "sha256": "546223503b2c39fad9f237650567d32f6240bdcdb419d194b82593bcb73317b1"
+    },
+    {
+      "path": "tests/test_v100_install_integrity.py",
+      "bytes": 2936,
+      "sha256": "bce3502b2988c5ae81f9a6fdd238185f1dd7f7c0f9bed94944887c12b73c857a"
+    },
+    {
+      "path": "tests/test_v100_knowledge.py",
+      "bytes": 1690,
+      "sha256": "bce41fcf2873157ccb90c40d9545364b1fa42b05547ec01effa2c8c3ccdc0f0a"
+    },
+    {
+      "path": "tests/test_v100_recipe_generator.py",
+      "bytes": 2530,
+      "sha256": "df11b08ab7074115da97ca6c6b68928f09fbd7115e0752fa88dfb88bb0f92530"
+    },
+    {
+      "path": "tests/test_v100_signing.py",
+      "bytes": 5005,
+      "sha256": "1ca4985b5219e667011dc8ec5a5cc626ab1fca3fbccd981b8fa6cd0171fb14fe"
+    },
+    {
+      "path": "tests/test_v100_unified_bundle.py",
+      "bytes": 3574,
+      "sha256": "3ab1856d20251e6eb63b64ee16a13c0d3a07c0793c90d23c69b0d99e31e759d7"
+    },
+    {
+      "path": "workflows/ROUTER.md",
+      "bytes": 1199,
+      "sha256": "3c338289ab28847cf2241e4d9ba079765811bb06598d36e7ebe46392a5abe8fe"
+    },
+    {
+      "path": "workflows/api-verify.md",
+      "bytes": 568,
+      "sha256": "c473d4b7813278c1ba200177954311e71125379cdb41afa7718736fa1b5b3da5"
+    },
+    {
+      "path": "workflows/asset-pipeline.md",
+      "bytes": 1577,
+      "sha256": "784cc48398e9cb946cd432270575a6d73c7d47866ba06012296b2712c5fb4725"
+    },
+    {
+      "path": "workflows/audit.md",
+      "bytes": 421,
+      "sha256": "2a5cf335a2147aa23e45fc53383c682c2e56631f3d78a90e1959247d6482d1d5"
+    },
+    {
+      "path": "workflows/build.md",
+      "bytes": 2524,
+      "sha256": "73911c41cae7465e751006b16a0f9d0cbaa9f5ff11531b982ef8f96b2dfd8bb8"
+    },
+    {
+      "path": "workflows/chat-mode.md",
+      "bytes": 3116,
+      "sha256": "75984e7798742a89f54dafe49fead358a740da7ae762e8952faf1db6eb67a17c"
+    },
+    {
+      "path": "workflows/clarify.md",
+      "bytes": 1131,
+      "sha256": "4d8504ade14239b8667846ff5e86e2b50750ce65b65e3802c0868dec80ecc2bc"
+    },
+    {
+      "path": "workflows/control-center.md",
+      "bytes": 1588,
+      "sha256": "317b644d5dc11c8eb3c75a2bfcd5521f653131bcf0ee5cd5deba39dfefeeed21"
+    },
+    {
+      "path": "workflows/debug.md",
+      "bytes": 1384,
+      "sha256": "4b57e24011e659945ec0d90d4f20112340a37ca009f0598d734587f7230627ce"
+    },
+    {
+      "path": "workflows/delivery.md",
+      "bytes": 603,
+      "sha256": "53dab954b1b30d1e150f0c516d32e2ba64d4ec516e986a500026294d30270356"
+    },
+    {
+      "path": "workflows/design.md",
+      "bytes": 891,
+      "sha256": "22b21510264f506e99c633bdb993ccda2c3b9ce03fed6262df0dbef9055e6283"
+    },
+    {
+      "path": "workflows/discovery.md",
+      "bytes": 827,
+      "sha256": "5168ad1c1bd31c41ded7a2010a426bca9a34a856b8bfd63186f61ea581796072"
+    },
+    {
+      "path": "workflows/engineering-orchestrator.md",
+      "bytes": 2366,
+      "sha256": "ae7e833b7ace898d7ff8a6ae4c34931b1648820b95efc63fe817c413a573f9a2"
+    },
+    {
+      "path": "workflows/optimize.md",
+      "bytes": 538,
+      "sha256": "f85839db0742eff133d2324505dc1213891078e1123eb0c59f4cb829369fa02b"
+    },
+    {
+      "path": "workflows/quality-and-delivery.md",
+      "bytes": 1670,
+      "sha256": "54db03916d0850c6c61145d7c094134121dd1cb692738312e7300b08a0f01543"
+    },
+    {
+      "path": "workflows/refactor.md",
+      "bytes": 386,
+      "sha256": "1a0921ff7e0cc79e412ef1a80e54b49318b7adf627632ec9959f2f08979d7f21"
+    },
+    {
+      "path": "workflows/release.md",
+      "bytes": 2309,
+      "sha256": "b2fdebe5b85057be2613399647550d6aaf4b73761538169ca0ac14c5af1bcce3"
+    },
+    {
+      "path": "workflows/ui-builder.md",
+      "bytes": 1384,
+      "sha256": "b3b5d7a5524047a1725ad626610eeb6fd518b45bad8b8760d7f2b4b5362b6baf"
+    },
+    {
+      "path": "workflows/ui-design.md",
+      "bytes": 966,
+      "sha256": "5332033b54535b99f006ed45fd8dfa1338fe03b0df8f2f97ab4983cc6d1a4267"
+    },
+    {
+      "path": "workflows/visual-reference.md",
+      "bytes": 3009,
+      "sha256": "8512895c8b25677ee9578b99a4d90d5e6d9f2a4553268f4cb6e4388a7786d028"
+    }
+  ],
+  "edition": "public",
+  "cryptographic_signature": "NOT PRESENT",
+  "uefn_compile": "NOT TESTED"
+}

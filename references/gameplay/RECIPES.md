@@ -1,0 +1,3 @@
+# Game systems / composable recipes
+
+Load `templates/recipes.json` and locate only systems requested. Recipes are **architectural drafts**, not compiled Verse programs. Design shared services first (PlayerState, Economy, Permissions, Persistence, UI router); never invent a remote DB API. Validate transaction idempotency before selling vehicles or properties. Inventory and vehicles require device/API field verification in local digest. Record granted/revoked ownership and reconnect behavior. Each recipe lists interfaces, dependencies, risks and acceptance tests; extend with device IDs and API evidence for the actual island.

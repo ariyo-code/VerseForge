@@ -1,0 +1,501 @@
+[
+  {
+    "id": "economy",
+    "objective": "single source of balance and transactions",
+    "dependencies": [],
+    "interfaces": [
+      "get_balance",
+      "charge_if_sufficient",
+      "grant",
+      "transaction_log"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "double charge",
+      "negative balance",
+      "reconnect"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": null,
+    "state_owner_contract": "canonical wallet",
+    "integration_guard": "look up wallet_manager before introducing new weak_map; atomicity and refund policy required",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "bank",
+    "objective": "accounts, deposits and transfers",
+    "dependencies": [
+      "economy"
+    ],
+    "interfaces": [
+      "deposit",
+      "withdraw",
+      "transfer"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "cross-account permission",
+      "concurrent transfer",
+      "insufficient funds"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": null,
+    "state_owner_contract": "canonical wallet",
+    "integration_guard": "no separate balance copies; transfer uses one authoritative transaction",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "inventory",
+    "objective": "item ownership and capacity",
+    "dependencies": [
+      "player-state"
+    ],
+    "interfaces": [
+      "grant",
+      "remove",
+      "query",
+      "equip"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "capacity",
+      "restore",
+      "duplicate item"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": null,
+    "state_owner_contract": "canonical inventory",
+    "integration_guard": "do not assume Creative Item Granter exposes full persistent inventory",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "vehicles",
+    "objective": "vehicle lifecycle and ownership",
+    "dependencies": [
+      "player-state"
+    ],
+    "interfaces": [
+      "spawn",
+      "despawn",
+      "lock",
+      "authorize_driver"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "unauthorized driver",
+      "disconnect while driving"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": "examples/benchmarks/C-rp-garage",
+    "state_owner_contract": "spawner slots",
+    "integration_guard": "when a spawner is shared, prevent cross-player slot collisions; vehicle entry access requires separate controls",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "garage",
+    "objective": "store and retrieve owned vehicles",
+    "dependencies": [
+      "vehicles",
+      "economy",
+      "persistence"
+    ],
+    "interfaces": [
+      "purchase",
+      "store",
+      "retrieve",
+      "lock"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "double purchase",
+      "rejoin",
+      "full garage"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": "examples/benchmarks/C-rp-garage",
+    "state_owner_contract": "VFStarterGarageProfiles",
+    "integration_guard": "before adding paid purchases, inject existing economy debit with idempotent transaction id",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "dealership",
+    "objective": "buy vehicles with validation",
+    "dependencies": [
+      "vehicles",
+      "economy"
+    ],
+    "interfaces": [
+      "quote",
+      "buy",
+      "deliver"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "insufficient balance",
+      "duplicate request"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "phone",
+    "objective": "per-player app launcher",
+    "dependencies": [
+      "player-state",
+      "ui-router"
+    ],
+    "interfaces": [
+      "open_app",
+      "close_app",
+      "notify"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "reconnect",
+      "input conflicts"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": "examples/benchmarks/B-verse-ui",
+    "state_owner_contract": "per-player UI state",
+    "integration_guard": "UI must open/close per player; cancel listener subscriptions on close",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "notifications",
+    "objective": "player-specific nonblocking feedback",
+    "dependencies": [
+      "ui-router"
+    ],
+    "interfaces": [
+      "push",
+      "dismiss"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "spam",
+      "cancel on leave"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": "examples/benchmarks/A-interactive-device",
+    "state_owner_contract": "per-agent HUD",
+    "integration_guard": "HUD.Show(Agent, Message, Time) is per-player; avoid overwriting per-agent messages unexpectedly",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  },
+  {
+    "id": "jobs",
+    "objective": "role assignments and payouts",
+    "dependencies": [
+      "player-state",
+      "economy",
+      "permissions"
+    ],
+    "interfaces": [
+      "start_job",
+      "complete_task",
+      "pay"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "duplicate reward",
+      "job switch"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "factions",
+    "objective": "roles and organization permissions",
+    "dependencies": [
+      "permissions",
+      "player-state"
+    ],
+    "interfaces": [
+      "join",
+      "leave",
+      "rank",
+      "can"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "cross-faction privilege",
+      "rank removal"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "police-mdt",
+    "objective": "access-controlled records and dispatch",
+    "dependencies": [
+      "factions",
+      "permissions",
+      "ui-router"
+    ],
+    "interfaces": [
+      "lookup",
+      "record",
+      "dispatch"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "unauthorized record access",
+      "log retention"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "property",
+    "objective": "owned property access and payments",
+    "dependencies": [
+      "economy",
+      "permissions",
+      "persistence"
+    ],
+    "interfaces": [
+      "buy",
+      "enter",
+      "revoke"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "duplicate keys",
+      "lost permissions"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "locks",
+    "objective": "owner-controlled access",
+    "dependencies": [
+      "permissions"
+    ],
+    "interfaces": [
+      "grant_access",
+      "revoke_access",
+      "is_locked"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "race open",
+      "owner leave"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "missions",
+    "objective": "objective state machine",
+    "dependencies": [
+      "player-state"
+    ],
+    "interfaces": [
+      "start",
+      "progress",
+      "cancel",
+      "reward"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "duplicate reward",
+      "round reset"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "progression",
+    "objective": "level and achievements",
+    "dependencies": [
+      "player-state",
+      "persistence"
+    ],
+    "interfaces": [
+      "add_xp",
+      "get_level"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "overflow",
+      "rollback"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "combat",
+    "objective": "damage and combat authority",
+    "dependencies": [
+      "player-state"
+    ],
+    "interfaces": [
+      "apply_damage",
+      "register_elimination"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "duplicate events",
+      "spectator state"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code"
+  },
+  {
+    "id": "interactions",
+    "objective": "interaction prompts and minigames",
+    "dependencies": [
+      "ui-router"
+    ],
+    "interfaces": [
+      "begin",
+      "complete",
+      "cancel"
+    ],
+    "architecture": "One domain state owner; device/UI adapters at boundary; check all Verse API claims against active editor before implementation.",
+    "api_requirements": [
+      "TODO(API VERIFY): resolve exact editor device/Verse signatures in target project"
+    ],
+    "limitations": [
+      "No real Verse compilation evidence",
+      "Persistence support must be verified per installed version"
+    ],
+    "acceptance_tests": [
+      "two players same target",
+      "disconnect"
+    ],
+    "validation": "draft",
+    "source": "VerseForge architectural template, not upstream code",
+    "implementation_reference": "examples/benchmarks/A-interactive-device",
+    "state_owner_contract": "device subscription owner",
+    "integration_guard": "Subscribe only once per lifecycle; Cancel on end",
+    "editor_validation_required": true,
+    "uefn_compilation": "NOT TESTED"
+  }
+]

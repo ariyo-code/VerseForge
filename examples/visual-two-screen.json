@@ -1,0 +1,14 @@
+{
+  "schema": "verseforge-visual-observations-v1",
+  "screens": [
+    {"id": "home", "elements": [
+      {"id": "brand", "kind": "text", "text": "CITY RP", "bounds": {"x": 0.05, "y": 0.06, "w": 0.3, "h": 0.1}, "evidence": "user-specified", "action": "display"},
+      {"id": "bank_button", "kind": "button", "text": "Open bank", "bounds": {"x": 0.25, "y": 0.5, "w": 0.3, "h": 0.13}, "evidence": "user-specified", "action": "navigate", "target": "bank"}
+    ]},
+    {"id": "bank", "elements": [
+      {"id": "heading", "kind": "text", "text": "My Bank", "bounds": {"x": 0.1, "y": 0.1, "w": 0.5, "h": 0.15}, "evidence": "user-specified", "action": "display"},
+      {"id": "close", "kind": "button", "text": "Close", "bounds": {"x": 0.8, "y": 0.06, "w": 0.15, "h": 0.1}, "evidence": "user-specified", "action": "close"}
+    ]}
+  ],
+  "requested_behavior": "A nonfunctional two-screen banking UI prototype. Real money operations are not generated."
+}

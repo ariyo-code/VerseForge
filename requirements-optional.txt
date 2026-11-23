@@ -1,0 +1,8 @@
+# Required only for Ed25519 provenance-verify; basic plans/validation use Python stdlib.
+cryptography>=42
+
+# Required only for opt-in MCP tools/call JSON Schema validation.
+jsonschema>=4.22,<5
+
+# Optional image pixel inspection for explicitly requested visual reconstruction.
+Pillow>=11,<13

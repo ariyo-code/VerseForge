@@ -1,0 +1,62 @@
+{
+  "project": "VerseForge",
+  "target": "0.9.0-rc1",
+  "scope": "local release candidate - production readiness NOT established",
+  "checks": [
+    {
+      "id": "skill_structure",
+      "type": "local_pytest_and_vf_validate",
+      "status": "PASS (vf validate, local pytest)"
+    },
+    {
+      "id": "chat_code_and_zip",
+      "type": "offline_end_to_end",
+      "status": "PASS (fresh code file, vf deliver, ZIP hash audit)"
+    },
+    {
+      "id": "visual_reference_schema",
+      "type": "offline_unit",
+      "status": "PASS (local test, semantic interpretation not tested)"
+    },
+    {
+      "id": "license_oidc_verifier",
+      "type": "mock_jwks_unit",
+      "status": "PASS (mock JWKS & nominated license, no real IdP)"
+    },
+    {
+      "id": "real_chatgpt_skill_activation",
+      "type": "host_real",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "real_codex_claude_cursor_activation",
+      "type": "host_real",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "uefn_compile",
+      "type": "uefn_windows_real",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "uefn_gameplay",
+      "type": "pic_real",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "uefn_multiplayer",
+      "type": "multi_client_real",
+      "status": "NOT TESTED"
+    },
+    {
+      "id": "commercial_oauth_deployment",
+      "type": "external_idp_and_secops",
+      "status": "NOT CONFIGURED"
+    },
+    {
+      "id": "commercial_distribution",
+      "type": "owner_legal_security_approval",
+      "status": "NOT APPROVED"
+    }
+  ]
+}

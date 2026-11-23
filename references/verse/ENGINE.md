@@ -1,0 +1,3 @@
+# Verse engineering checklist
+
+Before implementation resolve exact imported modules, type namespaces, function effects/return type, failure contexts, event payloads and the compatibility of any experimental APIs. Verify `<decides>`, `<transacts>`, suspension, optional values, arrays/maps, scoping, `@editable` and player-to-agent conversions against the current digest. Identify task ownership of `spawn` and cancellation of `race`/`sync` branches. Unsubscribe on replacement, player leave and end of match where applicable. Treat examples as architecture clues only: do not copy an API signature unverified. Source entry: Verse-AI-Knowledge `knowledge/ROUTING.md` + `docs/language/` + `docs/api/core/`.

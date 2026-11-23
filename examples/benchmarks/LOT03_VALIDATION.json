@@ -1,0 +1,39 @@
+{
+  "version": "0.3.0",
+  "source_files": {
+    "A": [
+      {
+        "file": "examples/benchmarks/A-interactive-device/vf_interactive_notice_device.verse",
+        "sha256": "4b0f654a1bd524742ecf0f7eafa1ed7e929340c7a2c63dbce106f332bedd6a61",
+        "status": "draft"
+      }
+    ],
+    "B": [
+      {
+        "file": "examples/benchmarks/B-verse-ui/vf_two_view_ui_device.verse",
+        "sha256": "d674b388ac1b7047635b566f06453789d951a678a653c9ca2f71135514ee848b",
+        "status": "draft"
+      }
+    ],
+    "C": [
+      {
+        "file": "examples/benchmarks/C-rp-garage/vf_garage_profile.verse",
+        "sha256": "56ad2af4e33e7494d23313233044e7e98f8307c5357d41aeda35abab742919ef",
+        "status": "draft"
+      },
+      {
+        "file": "examples/benchmarks/C-rp-garage/vf_starter_garage_device.verse",
+        "sha256": "68a053c1f15a94c6a11fac7543b8e063b64a6704b2792c28a2b13ca6fbe22265",
+        "status": "draft"
+      }
+    ]
+  },
+  "uefn_compile": "NOT TESTED",
+  "runtime": "NOT TESTED",
+  "multiplayer": "NOT TESTED",
+  "notes": [
+    "No UEFN executable on this Linux host",
+    "Original benchmark Verse files preserved; no speculative syntax changes",
+    "Current V25 knowledge API snapshot 42.20 does not prove target editor compatibility"
+  ]
+}

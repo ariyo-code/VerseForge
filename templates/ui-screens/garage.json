@@ -1,0 +1,34 @@
+{
+  "screen_id": "rp-garage",
+  "title": "Garage",
+  "style": "FiveM Premium",
+  "status": "design-only",
+  "owner": "per-player UI controller",
+  "state": {
+    "visible": "bool",
+    "vehicles": "array of owned-vehicle view models",
+    "selected_vehicle_id": "optional stable vehicle ID",
+    "busy": "bool",
+    "error": "optional user-safe message"
+  },
+  "layout": {
+    "root": "modal with focused header, list and actions",
+    "sections": [
+      {"id": "header", "type": "top-bar", "children": ["title", "close"]},
+      {"id": "list", "type": "scroll-list", "children": ["vehicle-row", "empty-state"]},
+      {"id": "details", "type": "detail-panel", "children": ["vehicle-name", "ownership", "status", "price"]},
+      {"id": "actions", "type": "action-bar", "children": ["spawn", "store", "lock", "unlock"]},
+      {"id": "feedback", "type": "nonblocking-toast", "children": ["error", "success"]}
+    ]
+  },
+  "commands": [
+    {"id": "garage.spawn", "requires": ["is_owned", "spawn_point_available", "not_busy"], "expects": "authoritative spawn result"},
+    {"id": "garage.store", "requires": ["is_owned", "near_garage", "not_busy"], "expects": "state updated once"},
+    {"id": "garage.lock", "requires": ["is_owned", "not_busy"], "expects": "authoritative permission check"},
+    {"id": "garage.close", "requires": [], "expects": "clear input/focus and unsubscribe"}
+  ],
+  "accessibility": {"gamepad": "visible focus + back", "touch": "scroll-safe large hitboxes", "keyboard": "predictable tab order", "contrast": "verify against project background"},
+  "implementation_paths": ["UMG", "Verse UI", "hybrid"],
+  "unverified_requirements": ["TODO(API VERIFY): actual UI widget APIs", "TODO(API VERIFY): vehicle interactions", "TODO(API VERIFY): persistence schema"],
+  "verification": {"visual": "NOT TESTED", "import": "NOT TESTED", "runtime": "NOT TESTED", "gamepad": "NOT TESTED", "touch": "NOT TESTED"}
+}

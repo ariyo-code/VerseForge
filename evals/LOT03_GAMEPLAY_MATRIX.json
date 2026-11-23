@@ -1,0 +1,264 @@
+{
+  "schema": "verseforge-gameplay-matrix-v1",
+  "generated_date": "2026-11-22",
+  "editor_version_observed": null,
+  "compiler": "NOT TESTED",
+  "gameplay": "NOT TESTED",
+  "multiplayer": "NOT TESTED",
+  "source_hashes": {
+    "A": [
+      {
+        "file": "examples/benchmarks/A-interactive-device/vf_interactive_notice_device.verse",
+        "sha256": "4b0f654a1bd524742ecf0f7eafa1ed7e929340c7a2c63dbce106f332bedd6a61",
+        "status": "draft"
+      }
+    ],
+    "B": [
+      {
+        "file": "examples/benchmarks/B-verse-ui/vf_two_view_ui_device.verse",
+        "sha256": "d674b388ac1b7047635b566f06453789d951a678a653c9ca2f71135514ee848b",
+        "status": "draft"
+      }
+    ],
+    "C": [
+      {
+        "file": "examples/benchmarks/C-rp-garage/vf_garage_profile.verse",
+        "sha256": "56ad2af4e33e7494d23313233044e7e98f8307c5357d41aeda35abab742919ef",
+        "status": "draft"
+      },
+      {
+        "file": "examples/benchmarks/C-rp-garage/vf_starter_garage_device.verse",
+        "sha256": "68a053c1f15a94c6a11fac7543b8e063b64a6704b2792c28a2b13ca6fbe22265",
+        "status": "draft"
+      }
+    ]
+  },
+  "tests": [
+    {
+      "id": "A1",
+      "benchmark": "A",
+      "objective": "Button event triggers a HUD notification for triggering player",
+      "action": "Player 1 presses configured button",
+      "expected": "HUD notice visible to player 1",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "A2",
+      "benchmark": "A",
+      "objective": "Two-player isolation",
+      "action": "Player 1 presses button while player 2 observes",
+      "expected": "Only player 1 receives the notification",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "A3",
+      "benchmark": "A",
+      "objective": "Player exit cleanup",
+      "action": "Player 1 disconnects during interaction lifecycle",
+      "expected": "No leaked subscription or runtime error",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "B1",
+      "benchmark": "B",
+      "objective": "UI opens",
+      "action": "Player 1 presses the open device",
+      "expected": "Canvas visible with first view",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "B2",
+      "benchmark": "B",
+      "objective": "Two views navigate",
+      "action": "Player 1 navigates twice",
+      "expected": "View 1 -> view 2 -> view 1",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "B3",
+      "benchmark": "B",
+      "objective": "UI close/open",
+      "action": "Close then reopen interface",
+      "expected": "Clean close and restored opening state",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "B4",
+      "benchmark": "B",
+      "objective": "Independent interfaces",
+      "action": "Two players open and navigate separately",
+      "expected": "No cross-player UI contamination",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "B5",
+      "benchmark": "B",
+      "objective": "Player disconnection",
+      "action": "Disconnect with UI visible",
+      "expected": "Widgets and subscriptions cleaned up",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "C1",
+      "benchmark": "C",
+      "objective": "Starter entitlement persisted",
+      "action": "Player claims car then leaves/rejoins in a new session",
+      "expected": "Ownership persists where persistent data is enabled",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "C2",
+      "benchmark": "C",
+      "objective": "Spawner interaction",
+      "action": "Player retrieves owned starter car",
+      "expected": "A real configured vehicle spawns",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "C3",
+      "benchmark": "C",
+      "objective": "Store vehicle",
+      "action": "Player stores retrieved car",
+      "expected": "Physical vehicle is removed and bay released",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "C4",
+      "benchmark": "C",
+      "objective": "Prevent second claim",
+      "action": "Claim same car again",
+      "expected": "Ownership not duplicated",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "C5",
+      "benchmark": "C",
+      "objective": "Simultaneous requests",
+      "action": "Two users retrieve at the same time",
+      "expected": "Distinct slots or capacity error with no collision",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    },
+    {
+      "id": "C6",
+      "benchmark": "C",
+      "objective": "Disconnect frees bay",
+      "action": "Leave while car is out",
+      "expected": "Physical slot becomes free without erasing entitlement",
+      "observed": null,
+      "status": "NOT TESTED",
+      "uefn_version": null,
+      "client_count": null,
+      "evidence": [],
+      "requirement": "Real UEFN PIC session and explicit observation; never accept a mock as success"
+    }
+  ],
+  "global_scenarios": [
+    {
+      "id": "M1",
+      "scenario": "Two players",
+      "status": "NOT TESTED",
+      "observed": null,
+      "evidence": []
+    },
+    {
+      "id": "M2",
+      "scenario": "Disconnect",
+      "status": "NOT TESTED",
+      "observed": null,
+      "evidence": []
+    },
+    {
+      "id": "M3",
+      "scenario": "Reconnect",
+      "status": "NOT TESTED",
+      "observed": null,
+      "evidence": []
+    },
+    {
+      "id": "M4",
+      "scenario": "Simultaneous interactions",
+      "status": "NOT TESTED",
+      "observed": null,
+      "evidence": []
+    },
+    {
+      "id": "M5",
+      "scenario": "Persistence across sessions",
+      "status": "NOT TESTED",
+      "observed": null,
+      "evidence": []
+    },
+    {
+      "id": "M6",
+      "scenario": "Independent UI state",
+      "status": "NOT TESTED",
+      "observed": null,
+      "evidence": []
+    }
+  ]
+}

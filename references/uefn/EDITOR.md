@@ -1,0 +1,3 @@
+# UEFN capabilities and evidence
+
+Use Epic `https://dev.epicgames.com/documentation/fortnite/uefn-mcp` and `https://dev.epicgames.com/documentation/fortnite/verse-api` as source discovery. UEFN MCP is an editor-hosted, local HTTP service; toolsets can include Verse reading/editing/build, Scene Graph entities, Creative Devices and PIC sessions. **Discover tools dynamically** because installed versions and enabled toolsets differ. Generate client config using UEFN Editor Preferences → Agentic Workflows → Model Context Protocol → Generate Client Config. Do not invent exposed functions. An editor connection is not implied by this Markdown skill. Note coordinate conversion and possible hitching per official known issues. Confirm session and compile output separately.

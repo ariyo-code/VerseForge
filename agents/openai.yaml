@@ -1,0 +1,4 @@
+interface:
+  display_name: "VerseForge"
+  short_description: "Evidence-grounded Verse and UEFN engineering"
+  default_prompt: "Active VerseForge. Si je ne donne aucune tâche, affiche le menu simple ; sinon traite directement ma demande Verse/UEFN en vérifiant les API et les preuves de test."

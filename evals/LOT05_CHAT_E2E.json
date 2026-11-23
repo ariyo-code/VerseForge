@@ -1,0 +1,15 @@
+{
+  "schema": "verseforge-lot05-local-e2e-v1",
+  "test_case": "menu -> select create -> detail -> existing agent-authored benchmark source -> create ZIP -> independently verify SHA-256",
+  "menu": "PASS (local CLI)",
+  "guided_question": "PASS (local CLI)",
+  "output_routing": "PASS (local CLI, declared can_create_files)",
+  "verse_generation_by_llm": "NOT TESTED (benchmark Verse file was authored in a previous LOT)",
+  "zip_written": "PASS",
+  "zip_verified": "PASS",
+  "zip_sha256": "0bb3207dad16456aa8e29cb1decfaa44e57ebf36b563f8b9a7ccf615420ba81b",
+  "real_host_activation": "NOT TESTED",
+  "uefn_compile": "NOT TESTED",
+  "gameplay": "NOT TESTED",
+  "multiplayer": "NOT TESTED"
+}

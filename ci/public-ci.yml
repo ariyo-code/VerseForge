@@ -1,0 +1,37 @@
+# Copy to .github/workflows/verseforge-public.yml in a GitHub repository with
+# the contents of the VerseForge public release ZIP at repository root.
+name: VerseForge public static verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install test and optional integration dependencies
+        run: python -m pip install 'pytest>=8,<10' -r requirements-optional.txt
+      - name: Validate skill structure
+        run: python scripts/vf.py validate
+      - name: Run public tests
+        run: python -m pytest -q tests
+      - name: Build reproducible release candidate
+        run: python scripts/vf.py release-build --skill-root . --version 1.0.0-rc4 --output ../verseforge-ci-release.zip
+      - name: Verify release candidate
+        run: python scripts/vf.py release-verify --file ../verseforge-ci-release.zip
+      - name: Declare evidence limitations
+        run: |
+          echo 'UEFN compilation: NOT TESTED'
+          echo 'Fortnite runtime: NOT TESTED'
+          echo 'Multiplayer: NOT TESTED'
+          echo 'External OIDC provider: NOT TESTED'

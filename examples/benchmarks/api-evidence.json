@@ -1,0 +1,101 @@
+{
+  "schema": "verseforge-api-evidence-v1",
+  "reviewed_at": "2026-11-22",
+  "epic_release_notes": "https://dev.epicgames.com/documentation/fortnite/43-10-fortnite-ecosystem-updates-and-release-notes",
+  "knowledge_snapshot": "Verse-AI-Knowledge V25 / API 42.20",
+  "target_editor": "unknown",
+  "source_evidence_level": "official-public-page-reviewed",
+  "signature_gate": "Revalidate exact fields using installed UEFN digests or verse-ai claim; this ledger alone does not promote compilation status",
+  "entries": [
+    {
+      "symbol": "button_device.InteractedWithEvent",
+      "module": "/Fortnite.com/Devices",
+      "claim_scope": "device event agent payload",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/coding-device-interactions-in-verse",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "hud_message_device.Show(agent,message,float)",
+      "module": "/Fortnite.com/Devices",
+      "claim_scope": "published exact overload",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/devices/hud_message_device/show-2",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "creative_device.OnEnd",
+      "module": "/Fortnite.com/Devices",
+      "claim_scope": "lifecycle override",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/devices/creative_device/onend",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "player_ui.AddWidget/RemoveWidget",
+      "module": "/UnrealEngine.com/Temporary/UI",
+      "claim_scope": "per player UI",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/making-widgets-interactable-in-unreal-editor-for-fortnite",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "button_loud.OnClick",
+      "module": "/Fortnite.com/UI",
+      "claim_scope": "widget_message click events",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/making-widgets-interactable-in-unreal-editor-for-fortnite",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "weak_map(player,class<final><persistable>)",
+      "module": "/Verse.org/Simulation",
+      "claim_scope": "persistent player data, size and schema limits",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/using-persistable-data-in-verse",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "vehicle_spawner_device.RespawnVehicle/DestroyVehicle",
+      "module": "/Fortnite.com/Devices",
+      "claim_scope": "physical vehicle lifecycle",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/devices/vehicle_spawner_device",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "popup_dialog_device.RespondingButtonEvent",
+      "module": "/Fortnite.com/Devices",
+      "claim_scope": "agent/button index response event",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/devices/popup_dialog_device",
+      "local_editor_signature_verified": false
+    },
+    {
+      "symbol": "fort_playspace.PlayerRemovedEvent",
+      "module": "/Fortnite.com/Playspaces",
+      "claim_scope": "player leave event",
+      "source_url": "https://dev.epicgames.com/documentation/fortnite/custom-round-logic-using-verse",
+      "local_editor_signature_verified": false
+    }
+  ],
+  "benchmarks": {
+    "A": {
+      "static_python": "PASS",
+      "uefn_compile": "NOT TESTED",
+      "runtime": "NOT TESTED",
+      "multiplayer": "NOT TESTED"
+    },
+    "B": {
+      "static_python": "PASS",
+      "uefn_compile": "NOT TESTED",
+      "runtime": "NOT TESTED",
+      "multiplayer": "NOT TESTED"
+    },
+    "C": {
+      "static_python": "PASS",
+      "uefn_compile": "NOT TESTED",
+      "runtime": "NOT TESTED",
+      "multiplayer": "NOT TESTED"
+    }
+  },
+  "known_gaps": [
+    "No editor digest read",
+    "No local Verse compilation",
+    "Popup button event exact generic declaration must be resolved in target digest",
+    "Vehicle occupation/anti-theft policy is outside this benchmark",
+    "No UMG asset was imported"
+  ]
+}

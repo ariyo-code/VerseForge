@@ -1,0 +1,11 @@
+{
+  "schema": "verseforge-lot05-host-compatibility-v1",
+  "skills_standard": "Agent Skills (name/description, progressive disclosure)",
+  "hosts": [
+    {"host": "ChatGPT", "real_activation": "NOT TESTED", "native_buttons": "NOT TESTED", "code_generation": "NOT TESTED", "zip_export": "NOT TESTED"},
+    {"host": "Codex", "real_activation": "NOT TESTED", "native_buttons": "NOT TESTED", "code_generation": "NOT TESTED", "zip_export": "NOT TESTED"},
+    {"host": "Claude Code", "real_activation": "NOT TESTED", "native_buttons": "NOT TESTED", "code_generation": "NOT TESTED", "zip_export": "NOT TESTED"},
+    {"host": "Cursor", "real_activation": "NOT TESTED", "native_buttons": "NOT TESTED", "code_generation": "NOT TESTED", "zip_export": "NOT TESTED"}
+  ],
+  "note": "Local Python CLI tests are not equivalent to tests of a genuine host's skill activation or native UI."
+}

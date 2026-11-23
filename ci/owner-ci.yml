@@ -1,0 +1,26 @@
+# For owner-only repository containing verseforge/ AND private-service/.
+# Do not publish this workflow with owner secrets or private key files.
+name: VerseForge owner source tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  owner-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install offline test dependencies
+        run: python -m pip install 'pytest>=8,<10' -r verseforge/requirements-optional.txt -r private-service/requirements.txt
+      - name: Public skill tests
+        run: python -m pytest -q verseforge/tests
+      - name: Private service tests (mock OIDC; no live IdP)
+        run: python -m pytest -q private-service/tests
+      - name: Skill structural validation
+        run: python verseforge/scripts/vf.py validate
+      - name: Declare limits
+        run: echo 'UEFN compile, gameplay, multiplayer and production OIDC NOT TESTED'

@@ -1,0 +1,62 @@
+{
+  "name": "Example RP UI",
+  "version": 1,
+  "palette": {
+    "background": "#10141C",
+    "surface": "#1E2633",
+    "primary": "#57B4FF",
+    "text": "#F8FAFF",
+    "danger": "#F06A78"
+  },
+  "font_policy": "Use only fonts licensed for in-game redistribution; verify import support",
+  "type_scale_px": [
+    12,
+    14,
+    16,
+    20,
+    26,
+    32
+  ],
+  "spacing_px": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "icon_sizes_px": [
+    16,
+    20,
+    24,
+    32
+  ],
+  "components": [
+    "button",
+    "card",
+    "tabs",
+    "modal",
+    "transaction-row",
+    "toast"
+  ],
+  "interaction_states": [
+    "default",
+    "hover",
+    "focus",
+    "pressed",
+    "disabled",
+    "loading",
+    "error",
+    "success"
+  ],
+  "navigation": {
+    "gamepad": "focus-ring and cancel path",
+    "touch": "large targets and scroll-safe",
+    "keyboard": "predictable tab order"
+  },
+  "performance": {
+    "avoid_unchanged_redraws": true,
+    "explicit_cleanup": true
+  },
+  "validation": "design-only"
+}

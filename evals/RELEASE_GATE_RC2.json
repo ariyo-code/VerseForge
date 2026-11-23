@@ -1,0 +1,15 @@
+{
+  "schema": "verseforge-release-gate-v1",
+  "version": "1.0.0-rc2",
+  "local_python_test_suite": "REQUIRES THIS RELEASE TEST EXECUTION",
+  "public_distribution": "REQUIRES THIS RELEASE HASH VERIFICATION",
+  "owner_panel_oidc_mock_tests": "REQUIRES THIS RELEASE TEST EXECUTION",
+  "native_host_activation": "NOT TESTED",
+  "real_uefn_compilation": "NOT TESTED",
+  "runtime_gameplay": "NOT TESTED",
+  "multiplayer": "NOT TESTED",
+  "production_oidc_idp": "NOT DEPLOYED",
+  "real_automatic_umg_assets": "NOT IMPLEMENTED",
+  "automatic_multimodule_gameplay_code": "HOST CODING AGENT REQUIRED",
+  "asset_legal_review": "REQUIRES HUMAN REVIEW"
+}

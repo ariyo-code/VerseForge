@@ -1,0 +1,13 @@
+{
+  "schema": "verseforge-engineering-spec-v1",
+  "project": "city_rp",
+  "description": "Independent City RP modules; actual features must be authored and tested in UEFN.",
+  "modules": [
+    {"id": "players", "kind": "player", "state_scope": "player-persistent", "owns": ["player_profile"], "requirements": ["Persist basic RP identity with a migration plan"]},
+    {"id": "economy", "kind": "economy", "state_scope": "player-persistent", "owns": ["player_wallet"], "depends_on": ["players"], "permissions": ["economy_edit"], "requirements": ["Single source of truth for money", "Idempotent purchase requests"]},
+    {"id": "inventory", "kind": "inventory", "state_scope": "player-persistent", "owns": ["player_inventory"], "depends_on": ["players", "economy"], "requirements": ["Prevent item duplication", "Transactional item grants"]},
+    {"id": "vehicles", "kind": "vehicle", "state_scope": "player-persistent", "owns": ["player_garages"], "depends_on": ["players", "economy"], "api_claims": ["vehicle_spawner_device", "fort_vehicle"], "requirements": ["Persistent registry with one vehicle owner", "Access restricted to key holders"]},
+    {"id": "staff", "kind": "moderation", "state_scope": "session", "owns": ["staff_duty"], "depends_on": ["players"], "permissions": ["staff_manage"], "requirements": ["Server-side permission validation", "Audited staff actions"]},
+    {"id": "admin_ui", "kind": "ui", "state_scope": "none", "depends_on": ["staff", "economy", "vehicles", "inventory"], "requirements": ["Accessible UMG admin panel", "Buttons wired only to verified services"]}
+  ]
+}

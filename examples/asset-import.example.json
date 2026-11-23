@@ -1,0 +1,14 @@
+{
+  "schema": "verseforge-asset-import-v1",
+  "assets": [
+    {
+      "source": "icons/original_icon.png",
+      "target": "UI/original_icon.png",
+      "license": "OWNER-CREATED",
+      "origin": "original",
+      "creator": "REPLACE_WITH_REAL_CREATOR",
+      "rights_reviewed": false,
+      "max_dimension": 512
+    }
+  ]
+}
